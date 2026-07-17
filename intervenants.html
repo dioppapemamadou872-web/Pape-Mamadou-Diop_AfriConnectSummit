@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervenants - AfriConnect Summit 2026</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         NAVBAR
+         ============================================ -->
+    <header id="navbar">
+        <nav>
+            <div class="nav-logo">
+                <a href="index.html">AfriConnect <span>Summit 2026</span></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html" class="active">Intervenants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="themeToggle" aria-label="Basculer le thème">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button id="hamburger" aria-label="Menu" class="hamburger">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main>
+
+        <!-- HERO INTERNE -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Nos intervenants</h1>
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <a href="index.html">Accueil</a>
+                    <span class="separator">></span>
+                    <span>Intervenants</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- SECTION FILTRAGE & INTERVENANTS -->
+        <section id="speakers">
+            <div class="container">
+                <h2>Les experts de l'édition 2026</h2>
+                <p class="section-subtitle">Des talents venus des 4 coins de l'Afrique</p>
+
+                <!-- Filtres -->
+                <div class="filters" role="group" aria-label="Filtrage des intervenants">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="ia-tech">IA & Tech</button>
+                    <button class="filter-btn" data-filter="business">Business</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                    <button class="filter-btn" data-filter="data">Data</button>
+                </div>
+
+                <!-- Grille des intervenants -->
+                <div class="speakers-grid" id="speakersGrid">
+                    <!-- Carte 1 -->
+                    <div class="speaker-card" data-category="ia-tech">
+                        <img src="images/speaker-1.jpg" alt="Dr. Awa Diallo - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Dr. Awa Diallo</h3>
+                            <span class="speaker-role">Expert en IA</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte 2 -->
+                    <div class="speaker-card" data-category="business">
+                        <img src="images/speaker-2.jpg" alt="Moussa Traoré - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Moussa Traoré</h3>
+                            <span class="speaker-role">Investisseur & Mentor</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Mali</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte 3 -->
+                    <div class="speaker-card" data-category="design">
+                        <img src="images/speaker-3.jpg" alt="Koffi Mensah - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Koffi Mensah</h3>
+                            <span class="speaker-role">Designer UX/UI</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Togo</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte 4 -->
+                    <div class="speaker-card" data-category="data">
+                        <img src="images/speaker-4.jpg" alt="Dr. Amina Touré - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Dr. Amina Touré</h3>
+                            <span class="speaker-role">Data Scientist</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Côte d'Ivoire</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte 5 -->
+                    <div class="speaker-card" data-category="ia-tech">
+                        <img src="images/speaker-5.jpg" alt="Cheikh Ndiaye - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Cheikh Ndiaye</h3>
+                            <span class="speaker-role">Développeur Blockchain</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte 6 -->
+                    <div class="speaker-card" data-category="business">
+                        <img src="images/speaker-6.jpg" alt="Sarah Benali - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Sarah Benali</h3>
+                            <span class="speaker-role">Entrepreneure Tech</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Algérie</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte 7 -->
+                    <div class="speaker-card" data-category="design">
+                        <img src="images/speaker-7.jpg" alt="Claire Abega - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Claire Abega</h3>
+                            <span class="speaker-role">Product Designer</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Cameroun</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte 8 -->
+                    <div class="speaker-card" data-category="data">
+                        <img src="images/speaker-8.jpg" alt="Jean-Baptiste N'Guessan - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Jean-Baptiste N'Guessan</h3>
+                            <span class="speaker-role">Expert Cybersécurité</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Côte d'Ivoire</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte 9 -->
+                    <div class="speaker-card" data-category="business">
+                        <img src="images/speaker-9.jpg" alt="Fatoumata Kébé - Photo de profil" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Fatoumata Kébé</h3>
+                            <span class="speaker-role">Fintech CEO</span>
+                            <span class="speaker-country"><i class="bi bi-geo-alt"></i> Mali</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AfriConnect Summit</h3>
+                    <p>La conférence tech panafricaine qui réunit les talents du continent.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> AfriConnect Summit. Tous droits réservés.</p>
+                <button id="backToTop" aria-label="Retour en haut">
+                    <i class="bi bi-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
