@@ -194,10 +194,9 @@ section h2 {
 }
 
 /* ============================================
-   ============================================
    NAVBAR
    ============================================ */
-   #navbar {
+#navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -622,37 +621,126 @@ section h2 {
 }
 
 .sponsor {
-    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: center;
     border-radius: var(--radius-md);
     font-weight: 600;
     transition: all var(--transition);
-    opacity: 0.7;
+    border: 2px solid var(--color-border);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-sm);
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .sponsor:hover {
-    opacity: 1;
-    transform: scale(1.05);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
 }
 
+/* Sponsor Or - le plus grand */
 .sponsor.gold {
-    font-size: 28px;
+    font-size: 24px;
+    padding: 24px 48px;
+    border-color: #D4AF37;
     color: #D4AF37;
-    border: 2px solid #D4AF37;
-    padding: 20px 40px;
+    flex: 1.2;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.01));
 }
 
+.sponsor.gold i {
+    font-size: 48px;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.sponsor.gold span {
+    display: block;
+    font-weight: 700;
+}
+
+.sponsor.gold small {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-top: var(--spacing-xs);
+}
+
+/* Sponsor Argent - taille moyenne */
 .sponsor.silver {
-    font-size: 22px;
+    font-size: 18px;
+    padding: 18px 32px;
+    border-color: #A8A9AD;
     color: #A8A9AD;
-    border: 2px solid #A8A9AD;
-    padding: 16px 32px;
+    flex: 1;
+    background: linear-gradient(135deg, rgba(168, 169, 173, 0.05), rgba(168, 169, 173, 0.01));
 }
 
+.sponsor.silver i {
+    font-size: 36px;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.sponsor.silver span {
+    display: block;
+    font-weight: 600;
+}
+
+.sponsor.silver small {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-top: var(--spacing-xs);
+}
+
+/* Sponsor Bronze - le plus petit */
 .sponsor.bronze {
-    font-size: 18px;
+    font-size: 14px;
+    padding: 14px 24px;
+    border-color: #CD7F32;
     color: #CD7F32;
-    border: 2px solid #CD7F32;
-    padding: 12px 24px;
+    flex: 0.8;
+    background: linear-gradient(135deg, rgba(205, 127, 50, 0.05), rgba(205, 127, 50, 0.01));
+}
+
+.sponsor.bronze i {
+    font-size: 28px;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.sponsor.bronze span {
+    display: block;
+    font-weight: 600;
+}
+
+.sponsor.bronze small {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-top: var(--spacing-xs);
+}
+
+/* Dark mode pour les sponsors */
+[data-theme="dark"] .sponsor.gold {
+    border-color: #F5C842;
+    color: #F5C842;
+}
+
+[data-theme="dark"] .sponsor.silver {
+    border-color: #C0C0C0;
+    color: #C0C0C0;
+}
+
+[data-theme="dark"] .sponsor.bronze {
+    border-color: #E08B4A;
+    color: #E08B4A;
 }
 
 /* ============================================
@@ -1378,17 +1466,44 @@ footer {
     }
 
     /* Sponsors */
+    .sponsors-list {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
     .sponsor.gold {
         font-size: 20px;
-        padding: 16px 28px;
+        padding: 20px 32px;
+        flex: unset;
+        width: 100%;
+        max-width: 280px;
     }
+
     .sponsor.silver {
         font-size: 16px;
-        padding: 12px 20px;
+        padding: 16px 28px;
+        flex: unset;
+        width: 100%;
+        max-width: 260px;
     }
+
     .sponsor.bronze {
         font-size: 14px;
-        padding: 10px 16px;
+        padding: 14px 24px;
+        flex: unset;
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .sponsor.gold i {
+        font-size: 36px;
+    }
+    .sponsor.silver i {
+        font-size: 28px;
+    }
+    .sponsor.bronze i {
+        font-size: 22px;
     }
 
     /* FAQ */
@@ -1482,6 +1597,23 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-lg);
+    }
+
+    /* Sponsors */
+    .sponsors-list {
+        gap: var(--spacing-lg);
+    }
+
+    .sponsor.gold {
+        padding: 20px 36px;
+    }
+
+    .sponsor.silver {
+        padding: 16px 28px;
+    }
+
+    .sponsor.bronze {
+        padding: 14px 22px;
     }
 }
 

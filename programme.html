@@ -19,7 +19,7 @@
 <body>
 
     <!-- ============================================
-         NAVBAR (identique à index.html)
+         NAVBAR
          ============================================ -->
     <header id="navbar">
         <nav>
@@ -71,19 +71,19 @@
 
                 <!-- Onglets -->
                 <div class="tabs" role="tablist">
-                    <button class="tab-btn active" data-day="1" role="tab" aria-selected="true">
+                    <button class="tab-btn active" data-day="1" role="tab" aria-selected="true" aria-controls="day1" id="tab-day1">
                         Jour 1 <span class="tab-date">15 Déc</span>
                     </button>
-                    <button class="tab-btn" data-day="2" role="tab" aria-selected="false">
+                    <button class="tab-btn" data-day="2" role="tab" aria-selected="false" aria-controls="day2" id="tab-day2">
                         Jour 2 <span class="tab-date">16 Déc</span>
                     </button>
-                    <button class="tab-btn" data-day="3" role="tab" aria-selected="false">
+                    <button class="tab-btn" data-day="3" role="tab" aria-selected="false" aria-controls="day3" id="tab-day3">
                         Jour 3 <span class="tab-date">17 Déc</span>
                     </button>
                 </div>
 
                 <!-- Contenu Jour 1 -->
-                <div class="tab-content active" id="day1">
+                <div class="tab-content active" id="day1" role="tabpanel" aria-labelledby="tab-day1">
                     <h3>Jour 1 - Innovation & Tech</h3>
                     <table class="schedule-table">
                         <thead>
@@ -142,7 +142,7 @@
                 </div>
 
                 <!-- Contenu Jour 2 -->
-                <div class="tab-content" id="day2">
+                <div class="tab-content" id="day2" role="tabpanel" aria-labelledby="tab-day2">
                     <h3>Jour 2 - Business & Investissement</h3>
                     <table class="schedule-table">
                         <thead>
@@ -201,7 +201,7 @@
                 </div>
 
                 <!-- Contenu Jour 3 -->
-                <div class="tab-content" id="day3">
+                <div class="tab-content" id="day3" role="tabpanel" aria-labelledby="tab-day3">
                     <h3>Jour 3 - Design, Data & Clôture</h3>
                     <table class="schedule-table">
                         <thead>
@@ -294,7 +294,7 @@
     </main>
 
     <!-- ============================================
-         FOOTER (identique à index.html)
+         FOOTER
          ============================================ -->
     <footer>
         <div class="container">
